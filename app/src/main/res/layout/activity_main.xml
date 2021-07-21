@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/iv_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#999999"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_crop"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/btn_crop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="2dp"
+        android:text="CROP"
+        app:layout_constraintTop_toBottomOf="@id/iv_image"
+        app:layout_constraintBottom_toTopOf="@id/iv_image_2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_save_matrix" />
+
+    <Button
+        android:id="@+id/btn_save_matrix"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="2dp"
+        android:text="SAVE"
+        app:layout_constraintTop_toBottomOf="@id/iv_image"
+        app:layout_constraintBottom_toTopOf="@id/iv_image_2"
+        app:layout_constraintLeft_toRightOf="@id/btn_crop"
+        app:layout_constraintRight_toLeftOf="@id/btn_load_matrix" />
+
+    <Button
+        android:id="@+id/btn_load_matrix"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="2dp"
+        android:text="LOAD"
+        app:layout_constraintTop_toBottomOf="@id/iv_image"
+        app:layout_constraintBottom_toTopOf="@id/iv_image_2"
+        app:layout_constraintLeft_toRightOf="@id/btn_save_matrix"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_image_2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_crop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
